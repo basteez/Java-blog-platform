@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <Resource id="jblogDataSource" type="DataSource">
+ 	JdbcDriver com.mysql.jdbc.Driver
+ 	JdbcUrl jdbc:mysql://localhost/java_blog_platform
+ 	Username root
+ 	Password root
+ </Resource>
