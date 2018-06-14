@@ -7,7 +7,7 @@ CREATE TABLE `java_blog_platform`.`user` (
   `first_name` VARCHAR(15) NOT NULL,
   `last_name` VARCHAR(15) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
-  `avatar_link` VARCHAR(100) NULL,
+  `avatar_link` VARCHAR(200) NULL,
   PRIMARY KEY (`id`));
 
 
