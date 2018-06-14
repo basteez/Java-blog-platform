@@ -2,6 +2,7 @@
 <html xmlns:h="http://java.sun.com/jsf/html"
 	  xmlns:p="http://java.sun.com/jsf/core"
 	  xmlns:ui="http://primefaces.org/ui"
+	  xmlns:uif="http://java.sun.com/jsf/facelets"
 	  xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
 	<h:head>
 		<meta charset="ISO-8859-1"/>
@@ -62,14 +63,60 @@
   </nav>
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-5 ml-auto mr-auto">
-					<div class="card">
-						<h2 class="card-title text-center">Welcome</h2>
-						<div class="card-body">
-							
+<!-- 				
+				<div class="col-sm-3">
+					<div class="card card-profile">
+						<div class="card-header card-header-image">
+								<img src="https://qph.ec.quoracdn.net/main-thumb-35488423-200-yefzymulxdubuovhmasxmivpbjqcvtvo.jpeg" />
 						</div>
-					</div>
+						
+						<div class="card-body">
+						  <h4 class="card-title">Tiziano Basile</h4>
+						  <p class="card-text">404 bio not found.</p>
+						  <a href="#" class="btn btn-primary">Check Tiziano's Posts</a>
+						</div>
+					</div>				
 				</div>
+				
+				<div class="col-sm-3">
+					<div class="card card-nav-tab">
+						<div class="card-body">
+							<img class="img-raised rounded-circle img-fluid" src="https://qph.ec.quoracdn.net/main-thumb-35488423-200-yefzymulxdubuovhmasxmivpbjqcvtvo.jpeg" width="100px"/>
+							<h4 class="card-title">Tiziano Basile</h4>
+							<p class="card-text">404 bio not found.</p>
+							<a href="#" class="btn btn-primary">Check Tiziano's Posts</a>
+						</div>
+					</div>				
+				</div>
+				
+				
+				<div class="col-sm-3">
+					<div class="card">
+						<img class="card-img-top" src="https://qph.ec.quoracdn.net/main-thumb-35488423-200-yefzymulxdubuovhmasxmivpbjqcvtvo.jpeg" alt="Card image cap"/>
+						<div class="card-body">
+						  <h4 class="card-title">Tiziano Basile</h4>
+						  <p class="card-text">404 bio not found.</p>
+						  <a href="#" class="btn btn-primary">Check Tiziano's Posts</a>
+						</div>
+					</div>			
+				</div>
+-->
+			<div class="row">
+				<uif:repeat var="user" value="#{user_manager.usersList}">
+					<div class="col-sm-3">
+						<div class="card card-nav-tab">
+							<div class="card-body">
+								<h:graphicImage url="#{user.avatarLink}" styleClass="img-raised rounded-circle img-fluid"></h:graphicImage>
+							
+								<h4 class="card-title">#{user.firstName} #{user.lastName}</h4>
+								<p class="card-text">404 bio not found.</p>
+								<a href="#" class="btn btn-primary">Check Tiziano's Posts</a>
+							</div>
+						</div>					
+					</div>
+				</uif:repeat>
+			</div>
+
 			</div>
 		</div>
 	

@@ -49,7 +49,7 @@ public class UserBean implements UserBeanLocal {
 
 	@Override
 	public List<User> findAll() {
-		return null;
+		return manager.createQuery("SELECT u FROM User u").getResultList();
 	}
 
 }
